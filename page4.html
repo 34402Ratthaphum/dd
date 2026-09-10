@@ -55,19 +55,34 @@
             margin-top: 15px;
         }
 
-        .back-button {
-            display: inline-block;
+        .buttons {
             margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 5px;
             padding: 13px 30px;
-            background: #333;
             color: white;
             text-decoration: none;
             border-radius: 10px;
             font-size: 18px;
         }
 
+        .back-button {
+            background: #333;
+        }
+
+        .next-button {
+            background: #0077ff;
+        }
+
         .back-button:hover {
             background: #555;
+        }
+
+        .next-button:hover {
+            background: #005fcc;
         }
 
         @media (max-width: 700px) {
@@ -88,8 +103,8 @@
 
             <!-- รูปที่ 5 -->
             <div class="work">
-                <img src="work5.jpg.jpeg" alt="อบรมสถานศึกษาปลอดภัย">
-                <h2>รูปที่ 5 อพยพเเผ่นดินไหว</h2>
+                <img src="work5.jpg.jpeg" alt="อพยพแผ่นดินไหว">
+                <h2>รูปที่ 5 อพยพแผ่นดินไหว</h2>
             </div>
 
             <!-- รูปที่ 6 -->
@@ -112,14 +127,21 @@
 
         </div>
 
-        <!-- กลับไปหน้า 3 -->
-        <a href="page3.html" class="back-button">
-            ← ย้อนกลับ
-        </a>
+        <div class="buttons">
+
+            <!-- กลับไปหน้า 3 -->
+            <a href="page3.html" class="button back-button">
+                ← ย้อนกลับ
+            </a>
+
+            <!-- ไปหน้า 5 -->
+            <a href="page5.html" class="button next-button">
+                ถัดไป →
+            </a>
+
+        </div>
 
     </div>
 
 </body>
 </html>
-     
-   
