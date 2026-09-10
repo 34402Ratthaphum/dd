@@ -55,19 +55,34 @@
             margin-top: 15px;
         }
 
-        .back-button {
-            display: inline-block;
+        .buttons {
             margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 5px;
             padding: 13px 30px;
-            background: #333;
             color: white;
             text-decoration: none;
             border-radius: 10px;
             font-size: 18px;
         }
 
+        .back-button {
+            background: #333;
+        }
+
+        .next-button {
+            background: #0077ff;
+        }
+
         .back-button:hover {
             background: #555;
+        }
+
+        .next-button:hover {
+            background: #005fcc;
         }
 
         @media (max-width: 700px) {
@@ -112,10 +127,19 @@
 
         </div>
 
-        <!-- กลับไปหน้า 2 -->
-        <a href="page2.html" class="back-button">
-            ← ย้อนกลับ
-        </a>
+        <div class="buttons">
+
+            <!-- กลับไปหน้า 2 -->
+            <a href="page2.html" class="button back-button">
+                ← ย้อนกลับ
+            </a>
+
+            <!-- ไปหน้า 4 -->
+            <a href="page4.html" class="button next-button">
+                ถัดไป →
+            </a>
+
+        </div>
 
     </div>
 
