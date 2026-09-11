@@ -1,129 +1,152 @@
 <!DOCTYPE html>
-
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ratthaphum | My Profile</title>
 
-```
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        color: #222;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
 
-    .container {
-        max-width: 800px;
-        margin: 80px auto;
-        padding: 40px;
-        background: white;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
 
-    h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
-    .name {
-        color: #0077ff;
-    }
+        .name {
+            color: #0077ff;
+        }
 
-    p {
-        font-size: 18px;
-        line-height: 1.7;
-    }
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
 
-    .about {
-        margin-top: 30px;
-        padding: 20px;
-        background: #f0f6ff;
-        border-radius: 10px;
-    }
+        .about {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f6ff;
+            border-radius: 10px;
+        }
 
-    /* ปุ่มถัดไป */
-    .next-button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 30px;
-        background: #0077ff;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 18px;
-        transition: 0.3s;
-    }
+        /* ตรามหาวิทยาลัย */
+        .university-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
 
-    .next-button:hover {
-        background: #005fcc;
-        transform: translateY(-2px);
-    }
+        /* ปุ่มถัดไป */
+        .next-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #0077ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
 
-    footer {
-        margin-top: 30px;
-        color: #777;
-        font-size: 14px;
-    }
-</style>
-```
+        .next-button:hover {
+            background: #005fcc;
+            transform: translateY(-2px);
+        }
 
+        footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
-```
-<div class="container">
+    <div class="container">
 
-    <h1>PORTFOLIO</h1>
+        <h1>PORTFOLIO</h1>
 
-    <p>
-        สวัสดีครับผมชื่อ
-        <span class="name"><strong>นายรัฐภูมิ โคษาสด</strong></span>
-    </p>
-<div class="about">
-    <h2>เกี่ยวกับฉัน</h2>
-    <p>
-        <strong>ชื่อ:</strong> นายรัฐภูมิ โคษาสด<br>
-        <strong>ชื่อเล่น:</strong> ฟิล์ม<br>
-        <strong>อายุ:</strong> 17 ปี<br>
-        <strong>วันเกิด:</strong> 2 เมษายน 2552<br>
-        <strong>สัญชาติ:</strong> ไทย<br>
-        <strong>กำลังศึกษาอยู่:</strong> ชั้นมัธยมศึกษาปีที่ 6/6<br>
-        <strong>สายการเรียน:</strong> Computer Science & Engineering
-    </p>
-</div>
-
-<div class="about">
-    <h2>ความสนใจ</h2>
-    <p>
-       สนใจศึกษาต่อ ในสาขา วิศวอุตสาหการ
-    </p>
-</div>
-    <div class="about">
-        <h2>มหาวิทยาลัยที่สนใจ</h2>
         <p>
-          มหาวิทยาลัยบรูพา
-            <strong>คณะ</strong>
-            <br>
-         วิศวอุตสาหการ
+            สวัสดีครับผมชื่อ
+            <span class="name">
+                <strong>นายรัฐภูมิ โคษาสด</strong>
+            </span>
         </p>
+
+        <!-- เกี่ยวกับฉัน -->
+        <div class="about">
+            <h2>เกี่ยวกับฉัน</h2>
+
+            <p>
+                <strong>ชื่อ:</strong> นายรัฐภูมิ โคษาสด<br>
+                <strong>ชื่อเล่น:</strong> ฟิล์ม<br>
+                <strong>อายุ:</strong> 17 ปี<br>
+                <strong>วันเกิด:</strong> 2 เมษายน 2552<br>
+                <strong>สัญชาติ:</strong> ไทย<br>
+                <strong>กำลังศึกษาอยู่:</strong> ชั้นมัธยมศึกษาปีที่ 6/6<br>
+                <strong>สายการเรียน:</strong> Computer Science & Engineering
+            </p>
+        </div>
+
+        <!-- ความสนใจ -->
+        <div class="about">
+            <h2>ความสนใจ</h2>
+
+            <p>
+                สนใจศึกษาต่อในสาขา วิศวอุตสาหการ
+            </p>
+        </div>
+
+        <!-- มหาวิทยาลัยที่สนใจ -->
+        <div class="about">
+            <h2>มหาวิทยาลัยที่สนใจ</h2>
+
+            <p>
+                มหาวิทยาลัยบูรพา
+
+                <img src="work9.jpg.jpeg"
+                     alt="ตรามหาวิทยาลัยบูรพา"
+                     class="university-logo">
+
+                <br>
+
+                <strong>คณะ</strong>
+
+                <br>
+
+                วิศวอุตสาหการ
+            </p>
+        </div>
+
+        <!-- ปุ่มไปหน้าถัดไป -->
+        <a href="page2.html" class="next-button">
+            ถัดไป →
+        </a>
+
+        <footer>
+            © 2026 Ratthaphum — My First Website
+        </footer>
+
     </div>
-
-    <!-- ปุ่มไปหน้าถัดไป -->
-    <a href="page2.html" class="next-button">ถัดไป →</a>
-
-    <footer>
-        © 2026 Ratthaphum — My First Website
-    </footer>
-
-</div>
-```
 
 </body>
 </html>
-
