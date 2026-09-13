@@ -10,8 +10,42 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            background: linear-gradient(135deg, #f1fff4, #c8f7d2);
             color: #222;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 🥥 มะพร้าวตกแต่งพื้นหลัง */
+        .coconut {
+            position: fixed;
+            font-size: 70px;
+            opacity: 0.18;
+            z-index: -1;
+        }
+
+        .coconut1 {
+            top: 5%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+
+        .coconut2 {
+            top: 20%;
+            right: 5%;
+            transform: rotate(15deg);
+        }
+
+        .coconut3 {
+            bottom: 10%;
+            left: 8%;
+            transform: rotate(10deg);
+        }
+
+        .coconut4 {
+            bottom: 5%;
+            right: 8%;
+            transform: rotate(-10deg);
         }
 
         .container {
@@ -21,12 +55,13 @@
             background: white;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px rgba(0, 100, 40, 0.18);
+            border: 3px solid #b7e8c2;
         }
 
         h1 {
             font-size: 40px;
-            color: #0077ff;
+            color: #16823b;
             margin-bottom: 40px;
         }
 
@@ -37,10 +72,17 @@
         }
 
         .work {
-            background: #f8f8f8;
+            background: #f3fff5;
             padding: 15px;
             border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 100, 40, 0.12);
+            border: 2px solid #c4ebcc;
+            transition: 0.3s;
+        }
+
+        .work:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0, 100, 40, 0.2);
         }
 
         .work img {
@@ -53,6 +95,13 @@
         .work h2 {
             font-size: 20px;
             margin-top: 15px;
+            color: #167a38;
+        }
+
+        .work p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
         }
 
         .buttons {
@@ -67,27 +116,43 @@
             text-decoration: none;
             border-radius: 10px;
             font-size: 18px;
+            transition: 0.3s;
         }
 
         .back-button {
-            background: #333;
-        }
-
-        .next-button {
-            background: #0077ff;
-        }
-
-        .back-button:hover {
             background: #555;
         }
 
+        .next-button {
+            background: linear-gradient(135deg, #35a853, #167a38);
+        }
+
+        .back-button:hover {
+            background: #333;
+            transform: translateY(-3px);
+        }
+
         .next-button:hover {
-            background: #005fcc;
+            background: linear-gradient(135deg, #16823b, #0d5c29);
+            transform: translateY(-3px);
         }
 
         @media (max-width: 700px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
             .works {
                 grid-template-columns: 1fr;
+            }
+
+            .work img {
+                height: 240px;
             }
         }
     </style>
@@ -95,43 +160,59 @@
 
 <body>
 
+    <!-- 🥥 มะพร้าวตกแต่ง -->
+    <div class="coconut coconut1">🥥</div>
+    <div class="coconut coconut2">🥥</div>
+    <div class="coconut coconut3">🥥</div>
+    <div class="coconut coconut4">🥥</div>
+
     <div class="container">
 
-     
-<h1>ผลงาน</h1>
+        <h1>🥥 ผลงาน 🥥</h1>
 
-<div class="works">
+        <div class="works">
 
-    <!-- รูปที่ 5 -->
-    <div class="work">
-        <img src="work5.jpg.jpeg" alt="อพยพแผ่นดินไหว">
-        <h2>รูปที่ 5 อพยพแผ่นดินไหว</h2>
-        <p>เข้าร่วมกิจกรรมฝึกซ้อมการอพยพเมื่อเกิดแผ่นดินไหว เพื่อเรียนรู้วิธีปฏิบัติตนและการเอาตัวรอดอย่างปลอดภัย</p>
-    </div>
+            <!-- รูปที่ 5 -->
+            <div class="work">
+                <img src="work5.jpg.jpeg" alt="อพยพแผ่นดินไหว">
+                <h2>รูปที่ 5 อพยพแผ่นดินไหว</h2>
+                <p>
+                    เข้าร่วมกิจกรรมฝึกซ้อมการอพยพเมื่อเกิดแผ่นดินไหว
+                    เพื่อเรียนรู้วิธีปฏิบัติตนและการเอาตัวรอดอย่างปลอดภัย
+                </p>
+            </div>
 
-    <!-- รูปที่ 6 -->
-    <div class="work">
-        <img src="work6.jpg.jpeg" alt="หลักสูตรการดับเพลิงขั้นต้น">
-        <h2>รูปที่ 6 หลักสูตรการดับเพลิงขั้นต้น</h2>
-        <p>เข้าร่วมการอบรมหลักสูตรการดับเพลิงขั้นต้น เรียนรู้วิธีป้องกันและรับมือกับเหตุเพลิงไหม้เบื้องต้น</p>
-    </div>
+            <!-- รูปที่ 6 -->
+            <div class="work">
+                <img src="work6.jpg.jpeg" alt="หลักสูตรการดับเพลิงขั้นต้น">
+                <h2>รูปที่ 6 หลักสูตรการดับเพลิงขั้นต้น</h2>
+                <p>
+                    เข้าร่วมการอบรมหลักสูตรการดับเพลิงขั้นต้น
+                    เรียนรู้วิธีป้องกันและรับมือกับเหตุเพลิงไหม้เบื้องต้น
+                </p>
+            </div>
 
-    <!-- รูปที่ 7 -->
-    <div class="work">
-        <img src="work7.jpg.jpeg" alt="อพยพหนีไฟ">
-        <h2>รูปที่ 7 อพยพหนีไฟ</h2>
-        <p>เข้าร่วมกิจกรรมฝึกซ้อมอพยพหนีไฟ เพื่อฝึกการปฏิบัติตนและการเคลื่อนย้ายออกจากพื้นที่อย่างปลอดภัย</p>
-    </div>
+            <!-- รูปที่ 7 -->
+            <div class="work">
+                <img src="work7.jpg.jpeg" alt="อพยพหนีไฟ">
+                <h2>รูปที่ 7 อพยพหนีไฟ</h2>
+                <p>
+                    เข้าร่วมกิจกรรมฝึกซ้อมอพยพหนีไฟ
+                    เพื่อฝึกการปฏิบัติตนและการเคลื่อนย้ายออกจากพื้นที่อย่างปลอดภัย
+                </p>
+            </div>
 
-    <!-- รูปที่ 8 -->
-    <div class="work">
-        <img src="work8.jpg.jpeg" alt="การปฐมพยาบาลฉุกเฉิน">
-        <h2>รูปที่ 8 การปฐมพยาบาลฉุกเฉิน</h2>
-        <p>เข้าร่วมกิจกรรมเรียนรู้การปฐมพยาบาลฉุกเฉิน เพื่อให้สามารถช่วยเหลือผู้ที่ได้รับบาดเจ็บหรือเจ็บป่วยเบื้องต้นได้อย่างเหมาะสม</p>
-    </div>
+            <!-- รูปที่ 8 -->
+            <div class="work">
+                <img src="work8.jpg.jpeg" alt="การปฐมพยาบาลฉุกเฉิน">
+                <h2>รูปที่ 8 การปฐมพยาบาลฉุกเฉิน</h2>
+                <p>
+                    เข้าร่วมกิจกรรมเรียนรู้การปฐมพยาบาลฉุกเฉิน
+                    เพื่อให้สามารถช่วยเหลือผู้ที่ได้รับบาดเจ็บหรือเจ็บป่วยเบื้องต้นได้อย่างเหมาะสม
+                </p>
+            </div>
 
-</div>
-```
+        </div>
 
         <div class="buttons">
 
@@ -142,7 +223,7 @@
 
             <!-- ไปหน้า 5 -->
             <a href="page5.html" class="button next-button">
-                ถัดไป →
+                ถัดไป → 🥥
             </a>
 
         </div>
