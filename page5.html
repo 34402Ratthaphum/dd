@@ -7,63 +7,304 @@
     <title>ขอบคุณ | Ratthaphum</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #fff0f3,
+                #fff8d6,
+                #eaffea,
+                #e5f7ff
+            );
             color: #222;
+            overflow: hidden;
         }
 
+        /* 🍓🍊🍉🍍🥝 ผลไม้ตกแต่ง */
+        .fruit {
+            position: fixed;
+            font-size: 75px;
+            z-index: 0;
+            opacity: 0.85;
+            user-select: none;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .fruit1 {
+            top: 7%;
+            left: 7%;
+            transform: rotate(-15deg);
+        }
+
+        .fruit2 {
+            top: 10%;
+            right: 8%;
+            transform: rotate(15deg);
+            animation-delay: 0.5s;
+        }
+
+        .fruit3 {
+            bottom: 10%;
+            left: 8%;
+            transform: rotate(10deg);
+            animation-delay: 1s;
+        }
+
+        .fruit4 {
+            bottom: 8%;
+            right: 8%;
+            transform: rotate(-10deg);
+            animation-delay: 1.5s;
+        }
+
+        .fruit5 {
+            top: 45%;
+            left: 2%;
+            font-size: 55px;
+            animation-delay: 2s;
+        }
+
+        .fruit6 {
+            top: 45%;
+            right: 2%;
+            font-size: 55px;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+
+        /* กล่องหลัก */
         .container {
-            max-width: 1000px;
-            margin: 100px auto;
-            padding: 80px 40px;
-            background: white;
-            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 70px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.15),
+                0 0 0 5px rgba(255, 255, 255, 0.6);
         }
 
+        /* ผลไม้ด้านบน */
+        .emoji {
+            font-size: 70px;
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+        }
+
+        /* หัวข้อ */
         h1 {
-            font-size: 60px;
-            color: #0077ff;
-            margin: 0 0 30px;
+            font-size: 58px;
+            margin: 0 0 10px;
+            background: linear-gradient(
+                90deg,
+                #ff3b30,
+                #ff9500,
+                #34c759,
+                #007aff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
+        /* THANK YOU */
+        .thank-you {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background: linear-gradient(
+                90deg,
+                #ff3b30,
+                #ff9500,
+                #34c759,
+                #007aff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* เส้นตกแต่ง */
+        .line {
+            width: 180px;
+            height: 5px;
+            margin: 25px auto;
+            border-radius: 10px;
+            background: linear-gradient(
+                90deg,
+                #ff3b30,
+                #ff9500,
+                #34c759,
+                #007aff
+            );
+        }
+
+        /* ข้อความ */
         p {
             font-size: 24px;
+            line-height: 1.8;
             color: #555;
+            margin: 10px 0;
         }
 
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* ปุ่ม */
         .back-button {
             display: inline-block;
             margin-top: 30px;
-            padding: 13px 30px;
-            background: #333;
+            padding: 15px 35px;
+            background: linear-gradient(
+                135deg,
+                #ff3b30,
+                #ff9500,
+                #34c759
+            );
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
+            border-radius: 15px;
+            font-size: 19px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 100, 50, 0.3);
+            transition: 0.3s;
         }
 
         .back-button:hover {
-            background: #555;
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(255, 100, 50, 0.35);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 35px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* มือถือ */
+        @media (max-width: 700px) {
+
+            body {
+                overflow-y: auto;
+            }
+
+            .container {
+                margin: 40px 20px;
+                padding: 50px 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .thank-you {
+                font-size: 25px;
+                letter-spacing: 4px;
+            }
+
+            .emoji {
+                font-size: 50px;
+                letter-spacing: 2px;
+            }
+
+            p {
+                font-size: 19px;
+            }
+
+            .name {
+                font-size: 23px;
+            }
+
+            .fruit {
+                font-size: 50px;
+            }
+
+            .fruit5,
+            .fruit6 {
+                display: none;
+            }
+
+            .back-button {
+                font-size: 17px;
+                padding: 13px 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- 🍓🍊🍉🍍🥝 ผลไม้ตกแต่ง -->
+    <div class="fruit fruit1">🍓</div>
+    <div class="fruit fruit2">🍊</div>
+    <div class="fruit fruit3">🍉</div>
+    <div class="fruit fruit4">🍍</div>
+    <div class="fruit fruit5">🥝</div>
+    <div class="fruit fruit6">🍎</div>
+
     <div class="container">
 
+        <!-- ผลไม้ด้านบน -->
+        <div class="emoji">
+            🍓 🍊 🍉 🍍 🥝
+        </div>
+
+        <!-- ข้อความขอบคุณ -->
         <h1>ขอบคุณครับบบ 🙏</h1>
 
-        <p>ขอบคุณที่เข้าชมแฟ้มสะสมงานของผมครับ</p>
+        <!-- THANK YOU -->
+        <div class="thank-you">
+            THANK YOU
+        </div>
+
+        <div class="line"></div>
+
+        <p>
+            ขอบคุณที่เข้าชม
+            <br>
+            แฟ้มสะสมงานของผมครับ
+        </p>
+
+        <div class="name">
+            นายรัฐภูมิ โคษาสด
+        </div>
 
         <!-- กลับไปหน้า 4 -->
         <a href="page4.html" class="back-button">
-            ← ย้อนกลับ
+            ← ย้อนกลับไปหน้าผลงาน
         </a>
+
+        <footer>
+            © 2026 Ratthaphum Portfolio 🍓🍊🍉🍍🥝
+        </footer>
+
+    </div>
+
+</body>
+</html>
 
     </div>
 
