@@ -10,8 +10,42 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            background: linear-gradient(135deg, #fff5f5, #ffd6d6);
             color: #222;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 🍎 แอปเปิลตกแต่งพื้นหลัง */
+        .apple {
+            position: fixed;
+            font-size: 70px;
+            opacity: 0.18;
+            z-index: -1;
+        }
+
+        .apple1 {
+            top: 5%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+
+        .apple2 {
+            top: 20%;
+            right: 5%;
+            transform: rotate(15deg);
+        }
+
+        .apple3 {
+            bottom: 10%;
+            left: 8%;
+            transform: rotate(10deg);
+        }
+
+        .apple4 {
+            bottom: 5%;
+            right: 8%;
+            transform: rotate(-10deg);
         }
 
         .container {
@@ -21,12 +55,13 @@
             background: white;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px rgba(180, 0, 0, 0.18);
+            border: 3px solid #ffcccc;
         }
 
         h1 {
             font-size: 40px;
-            color: #0077ff;
+            color: #d60000;
             margin-bottom: 40px;
         }
 
@@ -37,10 +72,17 @@
         }
 
         .work {
-            background: #f8f8f8;
+            background: #fff5f5;
             padding: 15px;
             border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(180, 0, 0, 0.12);
+            border: 2px solid #ffd1d1;
+            transition: 0.3s;
+        }
+
+        .work:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(180, 0, 0, 0.2);
         }
 
         .work img {
@@ -53,6 +95,13 @@
         .work h2 {
             font-size: 20px;
             margin-top: 15px;
+            color: #c40000;
+        }
+
+        .work p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
         }
 
         .buttons {
@@ -67,27 +116,43 @@
             text-decoration: none;
             border-radius: 10px;
             font-size: 18px;
+            transition: 0.3s;
         }
 
         .back-button {
-            background: #333;
-        }
-
-        .next-button {
-            background: #0077ff;
-        }
-
-        .back-button:hover {
             background: #555;
         }
 
+        .next-button {
+            background: linear-gradient(135deg, #ff3333, #c40000);
+        }
+
+        .back-button:hover {
+            background: #333;
+            transform: translateY(-3px);
+        }
+
         .next-button:hover {
-            background: #005fcc;
+            background: linear-gradient(135deg, #e60000, #990000);
+            transform: translateY(-3px);
         }
 
         @media (max-width: 700px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
             .works {
                 grid-template-columns: 1fr;
+            }
+
+            .work img {
+                height: 240px;
             }
         }
     </style>
@@ -95,42 +160,59 @@
 
 <body>
 
+    <!-- 🍎 แอปเปิลตกแต่ง -->
+    <div class="apple apple1">🍎</div>
+    <div class="apple apple2">🍎</div>
+    <div class="apple apple3">🍎</div>
+    <div class="apple apple4">🍎</div>
+
     <div class="container">
 
-<h1>ผลงาน</h1>
+        <h1>🍎 ผลงาน 🍎</h1>
 
-<div class="works">
+        <div class="works">
 
-    <!-- รูปที่ 1 -->
-    <div class="work">
-        <img src="work1.jpg.png" alt="บูธวันวิทยาศาสตร์">
-        <h2>รูปที่ 1 บูธวันวิทยาศาสตร์</h2>
-        <p>เข้าร่วมกิจกรรมบูธวันวิทยาศาสตร์ ได้เรียนรู้และมีส่วนร่วมในการจัดกิจกรรมทางวิทยาศาสตร์</p>
-    </div>
+            <!-- รูปที่ 1 -->
+            <div class="work">
+                <img src="work1.jpg.png" alt="บูธวันวิทยาศาสตร์">
+                <h2>รูปที่ 1 บูธวันวิทยาศาสตร์</h2>
+                <p>
+                    เข้าร่วมกิจกรรมบูธวันวิทยาศาสตร์
+                    ได้เรียนรู้และมีส่วนร่วมในการจัดกิจกรรมทางวิทยาศาสตร์
+                </p>
+            </div>
 
-    <!-- รูปที่ 2 -->
-    <div class="work">
-        <img src="work2.jpg.jpeg" alt="พลเมืองดิจิทัล">
-        <h2>รูปที่ 2 พลเมืองดิจิทัล</h2>
-        <p>เข้าร่วมกิจกรรมเกี่ยวกับพลเมืองดิจิทัล เรียนรู้การใช้เทคโนโลยีและสื่อดิจิทัลอย่างเหมาะสม</p>
-    </div>
+            <!-- รูปที่ 2 -->
+            <div class="work">
+                <img src="work2.jpg.jpeg" alt="พลเมืองดิจิทัล">
+                <h2>รูปที่ 2 พลเมืองดิจิทัล</h2>
+                <p>
+                    เข้าร่วมกิจกรรมเกี่ยวกับพลเมืองดิจิทัล
+                    เรียนรู้การใช้เทคโนโลยีและสื่อดิจิทัลอย่างเหมาะสม
+                </p>
+            </div>
 
-    <!-- รูปที่ 3 -->
-    <div class="work">
-        <img src="work3.jpg.jpg" alt="แข่งขันคณิตคิดเร็ว">
-        <h2>รูปที่ 3 แข่งขันคณิตคิดเร็ว</h2>
-        <p>เข้าร่วมการแข่งขันคณิตคิดเร็ว เพื่อฝึกทักษะการคิดคำนวณ ความรวดเร็ว และการแก้ปัญหา</p>
-    </div>
+            <!-- รูปที่ 3 -->
+            <div class="work">
+                <img src="work3.jpg.jpg" alt="แข่งขันคณิตคิดเร็ว">
+                <h2>รูปที่ 3 แข่งขันคณิตคิดเร็ว</h2>
+                <p>
+                    เข้าร่วมการแข่งขันคณิตคิดเร็ว
+                    เพื่อฝึกทักษะการคิดคำนวณ ความรวดเร็ว และการแก้ปัญหา
+                </p>
+            </div>
 
-    <!-- รูปที่ 4 -->
-    <div class="work">
-        <img src="work4.jpg.jpg" alt="อบรมโรคเอดส์">
-        <h2>รูปที่ 4 อบรมโรคเอดส์</h2>
-        <p>เข้าร่วมกิจกรรมอบรมให้ความรู้เกี่ยวกับโรคเอดส์ การป้องกัน และการดูแลสุขภาพอย่างถูกต้อง</p>
-    </div>
+            <!-- รูปที่ 4 -->
+            <div class="work">
+                <img src="work4.jpg.jpg" alt="อบรมโรคเอดส์">
+                <h2>รูปที่ 4 อบรมโรคเอดส์</h2>
+                <p>
+                    เข้าร่วมกิจกรรมอบรมให้ความรู้เกี่ยวกับโรคเอดส์
+                    การป้องกัน และการดูแลสุขภาพอย่างถูกต้อง
+                </p>
+            </div>
 
-</div>
-```
+        </div>
 
         <div class="buttons">
 
@@ -141,7 +223,7 @@
 
             <!-- ไปหน้า 4 -->
             <a href="page4.html" class="button next-button">
-                ถัดไป →
+                ถัดไป → 🍎
             </a>
 
         </div>
