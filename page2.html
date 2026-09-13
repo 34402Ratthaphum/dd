@@ -8,124 +8,317 @@
     <title>Portfolio - รัฐภูมิ โคษาสด</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
+            background: linear-gradient(135deg, #fffde7, #fff3a6);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
         }
+
+        /* =========================
+           🍌 กล้วยตกแต่งพื้นหลัง
+        ========================= */
+
+        .banana {
+            position: fixed;
+            width: 130px;
+            height: 55px;
+            border: 18px solid #f5c400;
+            border-left-color: transparent;
+            border-radius: 50%;
+            transform: rotate(-25deg);
+            opacity: 0.55;
+            z-index: -1;
+            filter: drop-shadow(0 5px 8px rgba(180, 140, 0, 0.15));
+        }
+
+        .banana::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 13px;
+            background: #765500;
+            border-radius: 5px;
+            top: -17px;
+            left: -3px;
+            transform: rotate(15deg);
+        }
+
+        .banana::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 8px;
+            background: #765500;
+            border-radius: 50%;
+            right: -10px;
+            bottom: -3px;
+        }
+
+        .banana1 {
+            top: 70px;
+            left: 3%;
+        }
+
+        .banana2 {
+            top: 250px;
+            right: 3%;
+            transform: rotate(25deg) scale(0.8);
+        }
+
+        .banana3 {
+            top: 600px;
+            left: 2%;
+            transform: rotate(20deg) scale(0.9);
+        }
+
+        .banana4 {
+            top: 850px;
+            right: 5%;
+            transform: rotate(-20deg) scale(0.7);
+        }
+
+        /* =========================
+           กล่องหลัก
+        ========================= */
 
         .container {
             max-width: 900px;
-            margin: 60px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 20px;
+            margin: 50px auto;
+            padding: 45px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #ffe477;
+            border-radius: 25px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 40px rgba(210, 170, 0, 0.18);
         }
 
+        /* =========================
+           หัวข้อ
+        ========================= */
+
         h1 {
-            font-size: 38px;
+            font-size: 40px;
             margin-bottom: 10px;
+            color: #d99d00;
         }
 
         h2 {
-            color: #0077ff;
+            color: #d99d00;
             font-size: 28px;
         }
 
         .name {
             font-size: 22px;
-            color: #555;
+            color: #8a6b00;
+            font-weight: bold;
         }
 
-        .description {
-            font-size: 20px;
-            line-height: 1.8;
-            margin: 25px 0;
-        }
+        /* =========================
+           รูปโปรไฟล์
+        ========================= */
 
         .profile-img {
             width: 250px;
             max-width: 90%;
-            border-radius: 15px;
+            border-radius: 20px;
             margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 5px solid #ffe477;
+            box-shadow: 0 10px 25px rgba(190, 150, 0, 0.2);
+            transition: 0.3s;
         }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* =========================
+           ส่วนข้อความ
+        ========================= */
+
+        .description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 25px 0;
+            padding: 25px;
+            background: #fffdf2;
+            border: 1px solid #ffe477;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .description:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(220, 175, 0, 0.15);
+        }
+
+        .description h2 {
+            margin-top: 0;
+        }
+
+        .description p {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           ปุ่ม
+        ========================= */
 
         .next-button {
             display: inline-block;
             margin-top: 25px;
-            padding: 14px 35px;
-            background: #0077ff;
+            padding: 14px 38px;
+            background: linear-gradient(90deg, #f5c400, #e5a900);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 30px;
             font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(220, 170, 0, 0.25);
             transition: 0.3s;
         }
 
         .next-button:hover {
-            background: #005fcc;
             transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(220, 170, 0, 0.35);
         }
+
+        /* =========================
+           Footer
+        ========================= */
 
         footer {
             margin-top: 35px;
-            color: #777;
+            color: #9a8240;
             font-size: 14px;
+        }
+
+        /* =========================
+           มือถือ
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+                margin: 20px;
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .name {
+                font-size: 19px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .banana {
+                opacity: 0.3;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- 🍌 กล้วยตกแต่งพื้นหลัง -->
+
+    <div class="banana banana1"></div>
+    <div class="banana banana2"></div>
+    <div class="banana banana3"></div>
+    <div class="banana banana4"></div>
+
+
     <div class="container">
 
-        <h1>แฟ้มสะสมงาน (Portfolio)</h1>
+        <!-- หัวข้อ -->
+
+        <h1>
+            🍌 แฟ้มสะสมงาน (Portfolio) 🍌
+        </h1>
 
         <div class="name">
             นายรัฐภูมิ โคษาสด
         </div>
 
-        <img src="profile.jpg"
-             alt="รูปโปรไฟล์"
-             class="profile-img">
 
-        <h2>ผลงานและกิจกรรม</h2>
+        <!-- รูปโปรไฟล์ -->
+
+        <img
+            src="profile.jpg"
+            alt="รูปโปรไฟล์"
+            class="profile-img"
+        >
+
+
+        <!-- ผลงานและกิจกรรม -->
 
         <div class="description">
+
+            <h2>🏆 ผลงานและกิจกรรม</h2>
+
             นี่คือผลงานที่ผมได้เก็บรวบรวม<br>
             และเป็นผลงานที่ผมภูมิใจครับ
+
         </div>
 
+
+        <!-- งานอดิเรก -->
+
         <div class="description">
-            <h2>งานอดิเรก</h2>
+
+            <h2>⚽ งานอดิเรก</h2>
+
             <p>
                 1. ดูฟุตบอล<br>
                 2. เล่นฟุตบอล<br>
                 3. ดูหนังและฟังเพลง<br>
                 4. เล่นเกม
             </p>
+
         </div>
 
+
+        <!-- ทักษะและความสามารถ -->
+
         <div class="description">
-            <h2>ทักษะและความสามารถ</h2>
+
+            <h2>💻 ทักษะและความสามารถ</h2>
+
             <p>
                 1. มีความคิดสร้างสรรค์<br>
                 2. สามารถใช้โปรแกรม 3ds Max<br>
                 3. สามารถทำงานเป็นทีม
             </p>
+
         </div>
 
+
         <!-- ปุ่มไปหน้า 3 -->
+
         <a href="page3.html" class="next-button">
-            portfolio →
+            ดูผลงานต่อ → 🍌
         </a>
 
+
+        <!-- Footer -->
+
         <footer>
-            © 2026 Ratthaphum Portfolio
+            © 2026 Ratthaphum Portfolio 🍌
         </footer>
 
     </div>
@@ -134,4 +327,3 @@
 </html>
 ```
 
-ตอนนี้หน้า 2 จะมีครบ **ชื่อ → รูปโปรไฟล์ → คำอธิบาย → งานอดิเรก → ทักษะและความสามารถ → ปุ่มไปหน้า 3** ครับ
