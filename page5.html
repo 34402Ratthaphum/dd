@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ขอบคุณ | Ratthaphum</title>
+    <title>Contact | Ratthaphum</title>
 
     <style>
         * {
@@ -23,10 +24,11 @@
                 #e5f7ff
             );
             color: #222;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* 🍓🍊🍉🍍🥝 ผลไม้ตกแต่งพื้นหลัง */
+
         .fruit {
             position: fixed;
             font-size: 75px;
@@ -39,27 +41,23 @@
         .fruit1 {
             top: 7%;
             left: 7%;
-            transform: rotate(-15deg);
         }
 
         .fruit2 {
             top: 10%;
             right: 8%;
-            transform: rotate(15deg);
             animation-delay: 0.5s;
         }
 
         .fruit3 {
             bottom: 10%;
             left: 8%;
-            transform: rotate(10deg);
             animation-delay: 1s;
         }
 
         .fruit4 {
             bottom: 8%;
             right: 8%;
-            transform: rotate(-10deg);
             animation-delay: 1.5s;
         }
 
@@ -88,12 +86,13 @@
         }
 
         /* กล่องหลัก */
+
         .container {
             position: relative;
             z-index: 1;
             max-width: 900px;
-            margin: 80px auto;
-            padding: 70px 40px;
+            margin: 60px auto;
+            padding: 55px 40px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
             text-align: center;
@@ -103,43 +102,11 @@
         }
 
         /* PORTFOLIO */
+
         .portfolio-title {
             font-size: 34px;
             font-weight: bold;
             letter-spacing: 8px;
-            margin-bottom: 20px;
-            background: linear-gradient(
-                90deg,
-                #ff3b30,
-                #ff9500,
-                #34c759,
-                #007aff
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* หัวข้อขอบคุณ */
-        h1 {
-            font-size: 58px;
-            margin: 0 0 10px;
-            background: linear-gradient(
-                90deg,
-                #ff3b30,
-                #ff9500,
-                #34c759,
-                #007aff
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* THANK YOU */
-        .thank-you {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 6px;
-            margin-top: 10px;
             margin-bottom: 15px;
             background: linear-gradient(
                 90deg,
@@ -152,7 +119,77 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* หัวข้อ */
+
+        h1 {
+            font-size: 48px;
+            margin: 10px 0;
+            background: linear-gradient(
+                90deg,
+                #ff3b30,
+                #ff9500,
+                #34c759,
+                #007aff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ชื่อ */
+
+        .name {
+            font-size: 25px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0 30px;
+        }
+
+        /* ข้อความ */
+
+        .intro {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* ช่องทางติดต่อ */
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-item {
+            display: block;
+            padding: 18px 25px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #333;
+            background: #fffdf2;
+            border: 2px solid #ffe477;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-item span {
+            display: block;
+            font-size: 15px;
+            font-weight: normal;
+            color: #777;
+            margin-top: 5px;
+        }
+
         /* เส้นตกแต่ง */
+
         .line {
             width: 180px;
             height: 5px;
@@ -167,26 +204,12 @@
             );
         }
 
-        /* ข้อความ */
-        p {
-            font-size: 24px;
-            line-height: 1.8;
-            color: #555;
-            margin: 10px 0;
-        }
+        /* ปุ่มกลับ */
 
-        .name {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 20px;
-        }
-
-        /* ปุ่ม */
         .back-button {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 35px;
+            margin-top: 35px;
+            padding: 14px 32px;
             background: linear-gradient(
                 135deg,
                 #ff3b30,
@@ -196,7 +219,7 @@
             color: white;
             text-decoration: none;
             border-radius: 15px;
-            font-size: 19px;
+            font-size: 18px;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(255, 100, 50, 0.3);
             transition: 0.3s;
@@ -204,10 +227,10 @@
 
         .back-button:hover {
             transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 10px 20px rgba(255, 100, 50, 0.35);
         }
 
         /* Footer */
+
         footer {
             margin-top: 35px;
             color: #888;
@@ -215,15 +238,12 @@
         }
 
         /* มือถือ */
+
         @media (max-width: 700px) {
 
-            body {
-                overflow-y: auto;
-            }
-
             .container {
-                margin: 40px 20px;
-                padding: 50px 20px;
+                margin: 30px 20px;
+                padding: 45px 20px;
             }
 
             .portfolio-title {
@@ -232,20 +252,19 @@
             }
 
             h1 {
-                font-size: 40px;
-            }
-
-            .thank-you {
-                font-size: 25px;
-                letter-spacing: 4px;
-            }
-
-            p {
-                font-size: 19px;
+                font-size: 38px;
             }
 
             .name {
-                font-size: 23px;
+                font-size: 22px;
+            }
+
+            .intro {
+                font-size: 17px;
+            }
+
+            .contact-item {
+                font-size: 18px;
             }
 
             .fruit {
@@ -256,11 +275,6 @@
             .fruit6 {
                 display: none;
             }
-
-            .back-button {
-                font-size: 17px;
-                padding: 13px 25px;
-            }
         }
     </style>
 </head>
@@ -268,6 +282,7 @@
 <body>
 
     <!-- 🍓🍊🍉🍍🥝 ผลไม้ตกแต่ง -->
+
     <div class="fruit fruit1">🍓</div>
     <div class="fruit fruit2">🍊</div>
     <div class="fruit fruit3">🍉</div>
@@ -275,43 +290,99 @@
     <div class="fruit fruit5">🥝</div>
     <div class="fruit fruit6">🍎</div>
 
+
     <div class="container">
 
         <!-- PORTFOLIO -->
+
         <div class="portfolio-title">
             PORTFOLIO
         </div>
 
-        <!-- ข้อความขอบคุณ -->
-        <h1>ขอบคุณครับบบ </h1>
 
-        <!--  THANK YOU  -->
-        <div class="thank-you">
-            THANK YOU
-        </div>
+        <!-- หัวข้อ -->
 
-        <div class="line"></div>
-
-        <p>
-            ขอบคุณที่เข้าชม
-            <br>
-            แฟ้มสะสมงานของผมครับ
-        </p>
+        <h1>
+            📱 ช่องทางการติดต่อ
+        </h1>
 
         <div class="name">
             นายรัฐภูมิ โคษาสด
         </div>
 
-        <!-- กลับไปหน้า 4 -->
+        <div class="line"></div>
+
+        <div class="intro">
+            สามารถติดต่อหรือเยี่ยมชมช่องทางต่าง ๆ ของผมได้ที่นี่ครับ
+        </div>
+
+
+        <!-- ช่องทางติดต่อ -->
+
+        <div class="contact-box">
+
+            <!-- LINE -->
+
+            <a
+                href="#"
+                class="contact-item"
+            >
+                💬 LINE
+                <span>ID: 0630826205</span>
+            </a>
+
+
+            <!-- Facebook -->
+
+            <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="contact-item"
+            >
+                📘 Facebook
+                <span>Ratthaphum kosasod</span>
+            </a>
+
+
+            <!-- Instagram -->
+
+            <a
+                href="https://www.instagram.com/ratthaphum_sj/"
+                target="_blank"
+                class="contact-item"
+            >
+                📷 Instagram
+                <span>@ratthaphum_sj</span>
+            </a>
+
+
+            <!-- เบอร์โทร -->
+
+            <a
+                href="tel:0630826205"
+                class="contact-item"
+            >
+                📞 โทรศัพท์
+                <span>063-082-6205</span>
+            </a>
+
+        </div>
+
+
+        <!-- กลับไปหน้าผลงาน -->
+
         <a href="page4.html" class="back-button">
             ← ย้อนกลับไปหน้าผลงาน
         </a>
 
+
         <footer>
-            © 2026 Ratthaphum Portfolio 🍓🍊🍉🍍🥝
+            © 2026 Ratthaphum Portfolio
         </footer>
 
     </div>
 
 </body>
 </html>
+```
+
