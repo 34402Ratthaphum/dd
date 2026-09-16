@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -174,10 +174,6 @@
             text-align: left;
         }
 
-        .sop h2 {
-            text-align: center;
-        }
-
         .sop p {
             text-indent: 40px;
             margin-bottom: 18px;
@@ -195,18 +191,42 @@
            ปุ่ม
         ========================= */
 
-        .next-button {
-            display: inline-block;
+        .button-area {
             margin-top: 25px;
-            padding: 14px 38px;
+        }
+
+        .next-button,
+        .back-button {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+
+        .back-button {
+            margin-right: 10px;
+            background: white;
+            color: #d99d00;
+            border: 2px solid #f5c400;
+        }
+
+        .back-button:hover {
+            background: #fff3a6;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(220, 175, 0, 0.2);
+        }
+
+        /* ปุ่มไปหน้าผลงาน */
+
+        .next-button {
             background: linear-gradient(90deg, #f5c400, #e5a900);
             color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 20px;
-            font-weight: bold;
             box-shadow: 0 8px 20px rgba(220, 170, 0, 0.25);
-            transition: 0.3s;
         }
 
         .next-button:hover {
@@ -258,6 +278,12 @@
             .sop p {
                 text-indent: 25px;
             }
+
+            .button-area a {
+                display: block;
+                width: fit-content;
+                margin: 12px auto;
+            }
         }
     </style>
 </head>
@@ -271,6 +297,8 @@
     <div class="banana banana3"></div>
     <div class="banana banana4"></div>
 
+
+    <!-- กล่องหลัก -->
 
     <div class="container">
 
@@ -294,7 +322,9 @@
         >
 
 
-        <!-- SOP -->
+        <!-- =========================
+             SOP
+        ========================= -->
 
         <div class="description sop">
 
@@ -324,7 +354,9 @@
         </div>
 
 
-        <!-- เป้าหมายในอนาคต -->
+        <!-- =========================
+             เป้าหมายในอนาคต
+        ========================= -->
 
         <div class="description sop">
 
@@ -348,19 +380,25 @@
         </div>
 
 
-        <!-- ผลงานและกิจกรรม -->
+        <!-- =========================
+             ผลงานและกิจกรรม
+        ========================= -->
 
         <div class="description">
 
             <h2>🏆 ผลงานและกิจกรรม</h2>
 
-            นี่คือผลงานที่ผมได้เก็บรวบรวม<br>
-            และเป็นผลงานที่ผมภูมิใจครับ
+            <p>
+                นี่คือผลงานที่ผมได้เก็บรวบรวม<br>
+                และเป็นผลงานที่ผมภูมิใจครับ
+            </p>
 
         </div>
 
 
-        <!-- งานอดิเรก -->
+        <!-- =========================
+             งานอดิเรก
+        ========================= -->
 
         <div class="description">
 
@@ -376,7 +414,9 @@
         </div>
 
 
-        <!-- ทักษะและความสามารถ -->
+        <!-- =========================
+             ทักษะและความสามารถ
+        ========================= -->
 
         <div class="description">
 
@@ -391,11 +431,25 @@
         </div>
 
 
-        <!-- ปุ่มไปหน้า 3 -->
+        <!-- =========================
+             ปุ่มนำทาง
+        ========================= -->
 
-        <a href="page3.html" class="next-button">
-            ดูผลงานต่อ → 🍌
-        </a>
+        <div class="button-area">
+
+            <!-- ปุ่มกลับหน้าแรก -->
+
+            <a href="index.html" class="back-button">
+                ← กลับหน้าแรก 🍊
+            </a>
+
+            <!-- ปุ่มไปหน้าผลงาน -->
+
+            <a href="page3.html" class="next-button">
+                ดูผลงานต่อ → 🍌
+            </a>
+
+        </div>
 
 
         <!-- Footer -->
@@ -409,4 +463,5 @@
 </body>
 </html>
 ```
+
 
