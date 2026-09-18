@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -65,6 +66,7 @@
             margin-bottom: 40px;
         }
 
+        /* แสดงผลงาน 2 ช่องต่อแถว */
         .works {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -85,7 +87,22 @@
             box-shadow: 0 8px 18px rgba(0, 100, 40, 0.2);
         }
 
-        .work img {
+        /* รูปเดี่ยว */
+        .work > img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* รูปคู่ */
+        .work-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .work-images img {
             width: 100%;
             height: 280px;
             object-fit: cover;
@@ -137,7 +154,9 @@
             transform: translateY(-3px);
         }
 
+        /* สำหรับมือถือ */
         @media (max-width: 700px) {
+
             .container {
                 margin: 20px;
                 padding: 20px;
@@ -151,8 +170,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .work img {
+            .work > img {
                 height: 240px;
+            }
+
+            .work-images img {
+                height: 200px;
             }
         }
     </style>
@@ -174,46 +197,73 @@
 
             <!-- รูปที่ 5 -->
             <div class="work">
+
                 <img src="work5.jpg.jpeg" alt="อพยพแผ่นดินไหว">
+
                 <h2>รูปที่ 5 อพยพแผ่นดินไหว</h2>
+
                 <p>
                     เข้าร่วมกิจกรรมฝึกซ้อมการอพยพเมื่อเกิดแผ่นดินไหว
                     เพื่อเรียนรู้วิธีปฏิบัติตนและการเอาตัวรอดอย่างปลอดภัย
                 </p>
+
             </div>
 
-            <!-- รูปที่ 6 -->
+
+            <!-- รูปที่ 6 + unnamed.jpg -->
             <div class="work">
-                <img src="work6.jpg.jpeg" alt="หลักสูตรการดับเพลิงขั้นต้น">
+
+                <div class="work-images">
+
+                    <img src="work6.jpg.jpeg" alt="หลักสูตรการดับเพลิงขั้นต้น">
+
+                    <img src="unnamed.jpg" alt="หลักสูตรการดับเพลิงขั้นต้นเพิ่มเติม">
+
+                </div>
+
                 <h2>รูปที่ 6 หลักสูตรการดับเพลิงขั้นต้น</h2>
+
                 <p>
                     เข้าร่วมการอบรมหลักสูตรการดับเพลิงขั้นต้น
                     เรียนรู้วิธีป้องกันและรับมือกับเหตุเพลิงไหม้เบื้องต้น
                 </p>
+
             </div>
+
 
             <!-- รูปที่ 7 -->
             <div class="work">
+
                 <img src="work7.jpg.jpeg" alt="อพยพหนีไฟ">
+
                 <h2>รูปที่ 7 อพยพหนีไฟ</h2>
+
                 <p>
                     เข้าร่วมกิจกรรมฝึกซ้อมอพยพหนีไฟ
                     เพื่อฝึกการปฏิบัติตนและการเคลื่อนย้ายออกจากพื้นที่อย่างปลอดภัย
                 </p>
+
             </div>
+
 
             <!-- รูปที่ 8 -->
             <div class="work">
+
                 <img src="work8.jpg.jpeg" alt="การปฐมพยาบาลฉุกเฉิน">
+
                 <h2>รูปที่ 8 การปฐมพยาบาลฉุกเฉิน</h2>
+
                 <p>
                     เข้าร่วมกิจกรรมเรียนรู้การปฐมพยาบาลฉุกเฉิน
                     เพื่อให้สามารถช่วยเหลือผู้ที่ได้รับบาดเจ็บหรือเจ็บป่วยเบื้องต้นได้อย่างเหมาะสม
                 </p>
+
             </div>
 
         </div>
 
+
+        <!-- ปุ่มนำทาง -->
         <div class="buttons">
 
             <!-- กลับไปหน้า 3 -->
@@ -232,3 +282,4 @@
 
 </body>
 </html>
+```
